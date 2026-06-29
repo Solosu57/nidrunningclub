@@ -1,0 +1,319 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+.w{font-family:'Space Grotesk',Arial,sans-serif;background:#F5F0E8;padding-bottom:3rem;}
+.hero{background:#1A1A1A;padding:2.5rem 1.5rem 0;text-align:center;}
+.hero-tag{display:inline-block;background:#FEF104;color:#1A1A1A;font-size:10px;font-weight:700;letter-spacing:3px;padding:5px 16px;margin-bottom:1.5rem;}
+.hero-title{font-family:'Nunito',sans-serif;font-size:clamp(2.8rem,9vw,4.5rem);font-weight:900;color:#FEF104;line-height:0.95;margin-bottom:0.5rem;letter-spacing:-2px;}
+.hero-title span{color:#fff;}
+.hero-sub{color:#888;font-size:13px;margin-bottom:1.5rem;line-height:1.6;}
+.hero-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding-bottom:2rem;}
+.hpill{border:1.5px solid #333;color:#ccc;font-size:11px;font-weight:700;padding:5px 14px;letter-spacing:1px;}
+.hpill b{color:#FEF104;}
+.mascot-strip{background:#FEF104;padding:0.5rem 0;overflow:hidden;white-space:nowrap;}
+.ticker{display:inline-block;animation:tick 14s linear infinite;}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker span{font-size:12px;font-weight:700;color:#1A1A1A;letter-spacing:2px;padding:0 2rem;}
+.sec{padding:2rem 1.5rem 0;}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;}
+.sec-num{background:#1A1A1A;color:#FEF104;font-size:13px;font-weight:900;width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.sec-label{font-size:11px;font-weight:700;letter-spacing:2px;color:#1A1A1A;text-transform:uppercase;border-bottom:2px solid #1A1A1A;padding-bottom:2px;}
+.card{background:#fff;border:2px solid #1A1A1A;padding:1.25rem;margin-bottom:0.75rem;}
+.step-r{display:flex;gap:1rem;padding:0.75rem 0;border-bottom:1.5px solid #F0EBE0;}
+.step-r:last-child{border-bottom:none;}
+.snm{background:#FEF104;color:#1A1A1A;font-size:11px;font-weight:900;width:26px;height:26px;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1.5px solid #1A1A1A;}
+.sbody{font-size:13px;color:#333;line-height:1.6;padding-top:2px;}
+.sbody b{color:#1A1A1A;}
+.tasks{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.task{background:#fff;border:2px solid #1A1A1A;padding:0.75rem 0.5rem;text-align:center;}
+.task-n{font-size:11px;font-weight:700;color:#1A1A1A;margin-top:6px;}
+.bracket{display:flex;flex-direction:column;}
+.rnd{display:flex;align-items:center;gap:12px;padding:0.85rem 0;border-bottom:1.5px solid #F0EBE0;}
+.rnd:last-child{border-bottom:none;}
+.rbdg{font-size:10px;font-weight:700;letter-spacing:1px;padding:4px 12px;flex-shrink:0;}
+.rdsc{font-size:12px;color:#444;line-height:1.5;}
+.awards{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.aw{background:#fff;border:2px solid #1A1A1A;padding:1rem;text-align:center;}
+.aw-t{font-size:13px;font-weight:700;color:#1A1A1A;margin-top:8px;}
+.aw-s{font-size:11px;color:#888;margin-top:2px;}
+.fam-box{background:#FEF104;border:2px solid #1A1A1A;padding:1.25rem;}
+.fam-box p{font-size:13px;color:#1A1A1A;line-height:1.8;}
+.divider{height:2px;background:#1A1A1A;margin:1.5rem 1.5rem 0;}
+.form-area{background:#1A1A1A;padding:2rem 1.5rem;}
+.form-title{font-family:'Nunito',sans-serif;font-size:1.8rem;font-weight:900;color:#FEF104;margin-bottom:0.25rem;}
+.form-sub{color:#888;font-size:12px;margin-bottom:1.5rem;}
+.form-group{margin-bottom:1rem;}
+.form-label{font-size:11px;font-weight:700;color:#FEF104;letter-spacing:1px;margin-bottom:6px;display:block;}
+.form-input{width:100%;background:#2A2A2A;border:1.5px solid #444;color:#fff;font-family:'Space Grotesk',sans-serif;font-size:13px;padding:10px 14px;outline:none;transition:border-color 0.2s;}
+.form-input:focus{border-color:#FEF104;}
+.form-input option{background:#2A2A2A;color:#fff;}
+.terms-toggle{width:100%;background:#2A2A2A;border:1.5px solid #444;color:#FEF104;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;padding:10px 14px;cursor:pointer;text-align:left;display:flex;justify-content:space-between;align-items:center;}
+.terms-toggle:hover{border-color:#FEF104;}
+.terms-body{display:none;background:#222;border:1.5px solid #444;border-top:none;padding:1rem;max-height:220px;overflow-y:auto;color:#aaa;font-size:11px;line-height:1.8;}
+.terms-body.open{display:block;}
+.terms-body p{margin-bottom:0.75rem;}
+.terms-body::-webkit-scrollbar{width:4px;}
+.terms-body::-webkit-scrollbar-track{background:#333;}
+.terms-body::-webkit-scrollbar-thumb{background:#FEF104;}
+.terms-scroll-note{font-size:10px;color:#666;margin-top:6px;text-align:right;}
+.form-check{display:flex;align-items:center;gap:8px;margin-top:0.75rem;}
+.form-check input{accent-color:#FEF104;width:16px;height:16px;}
+.form-check input:disabled{cursor:not-allowed;opacity:0.4;}
+.form-check label{font-size:12px;color:#ccc;}
+.submit-btn{width:100%;background:#FEF104;color:#1A1A1A;font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;padding:1rem;border:2px solid #FEF104;cursor:pointer;letter-spacing:1px;margin-top:1rem;}
+.submit-btn:hover{background:#E6D800;}
+.success-box{display:none;background:#FEF104;border:2px solid #1A1A1A;padding:1.5rem;text-align:center;margin-top:1rem;}
+.success-box .s-title{font-family:'Nunito',sans-serif;font-size:1.4rem;font-weight:900;color:#1A1A1A;margin-bottom:0.5rem;}
+.success-box .s-sub{font-size:12px;color:#333;line-height:1.7;}
+.form-note{font-size:11px;color:#666;margin-top:0.75rem;text-align:center;}
+.notes-sec{padding:1.5rem;}
+.note{display:flex;gap:8px;font-size:12px;color:#555;line-height:1.6;margin-bottom:6px;}
+.ndot{color:#1A1A1A;font-weight:900;flex-shrink:0;}
+</style>
+
+<div class="w">
+<div class="hero">
+  <div class="hero-tag">NID FAMILY DAY · JULY 2026</div>
+
+  <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="display:block;margin:0 auto 1.5rem;" role="img">
+    <title>NID 接力賽跑者</title>
+    <rect width="680" height="200" fill="#1A1A1A"/>
+    <rect x="0" y="168" width="680" height="2" fill="#FEF104" opacity="0.3"/>
+    <rect x="20" y="90" width="48" height="4" rx="2" fill="#FEF104" opacity="0.7"/>
+    <rect x="20" y="100" width="32" height="3" rx="1.5" fill="#FEF104" opacity="0.4"/>
+    <rect x="20" y="108" width="40" height="2" rx="1" fill="#FEF104" opacity="0.25"/>
+    <g transform="translate(110,24)">
+      <ellipse cx="22" cy="148" rx="22" ry="6" fill="#000" opacity="0.35"/>
+      <path d="M18 90 L8 118 L2 142" stroke="#CC9900" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M26 90 L36 112 L46 130 L42 142" stroke="#FEF104" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <rect x="-6" y="136" width="20" height="8" rx="4" fill="#1A1A1A" stroke="#FEF104" stroke-width="1.5"/>
+      <rect x="34" y="136" width="20" height="8" rx="4" fill="#1A1A1A" stroke="#FEF104" stroke-width="1.5"/>
+      <path d="M10 52 L34 52 L30 90 L14 90 Z" fill="#FEF104"/>
+      <path d="M12 58 L-6 80 L-2 88" stroke="#FEF104" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M32 58 L50 40" stroke="#FEF104" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <rect x="46" y="30" width="38" height="7" rx="3.5" fill="#FEF104" stroke="#1A1A1A" stroke-width="1.5"/>
+      <rect x="46" y="30" width="12" height="7" rx="3.5" fill="#CC9900"/>
+      <rect x="18" y="42" width="8" height="12" rx="2" fill="#CC9900"/>
+      <rect x="4" y="12" width="36" height="34" rx="18" fill="#FEF104"/>
+      <rect x="0" y="22" width="44" height="8" rx="4" fill="#CC9900"/>
+      <rect x="10" y="18" width="10" height="7" rx="3.5" fill="#1A1A1A"/>
+      <rect x="24" y="18" width="10" height="7" rx="3.5" fill="#1A1A1A"/>
+      <path d="M12 32 Q22 38 32 32" stroke="#1A1A1A" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <text x="22" y="75" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="9" font-weight="900" fill="#1A1A1A">NID</text>
+    </g>
+    <g transform="translate(290,18)">
+      <ellipse cx="22" cy="154" rx="22" ry="6" fill="#000" opacity="0.35"/>
+      <path d="M16 94 L4 122 L-2 148" stroke="#CCCCCC" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M28 94 L42 108 L52 90 L46 82" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <rect x="-10" y="142" width="20" height="8" rx="4" fill="#1A1A1A" stroke="#fff" stroke-width="1.5"/>
+      <rect x="38" y="76" width="20" height="8" rx="4" fill="#1A1A1A" stroke="#fff" stroke-width="1.5"/>
+      <path d="M8 56 L36 56 L32 94 L12 94 Z" fill="#fff"/>
+      <path d="M10 62 L-10 82" stroke="#fff" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <path d="M34 62 L54 48" stroke="#fff" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <rect x="50" y="38" width="38" height="7" rx="3.5" fill="#FEF104" stroke="#1A1A1A" stroke-width="1.5"/>
+      <rect x="50" y="38" width="12" height="7" rx="3.5" fill="#CC9900"/>
+      <rect x="18" y="46" width="8" height="12" rx="2" fill="#CCC"/>
+      <rect x="6" y="14" width="36" height="36" rx="18" fill="#fff"/>
+      <path d="M2 26 Q22 14 42 26" fill="#1A1A1A"/>
+      <rect x="10" y="22" width="10" height="7" rx="3.5" fill="#1A1A1A"/>
+      <rect x="24" y="22" width="10" height="7" rx="3.5" fill="#1A1A1A"/>
+      <rect x="12" y="23" width="4" height="3" rx="1.5" fill="#fff" opacity="0.5"/>
+      <rect x="26" y="23" width="4" height="3" rx="1.5" fill="#fff" opacity="0.5"/>
+      <path d="M12 36 Q22 42 32 36" stroke="#1A1A1A" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <text x="22" y="79" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="9" font-weight="900" fill="#1A1A1A">NID</text>
+    </g>
+    <g transform="translate(470,22)">
+      <ellipse cx="22" cy="150" rx="22" ry="6" fill="#000" opacity="0.35"/>
+      <path d="M16 92 L6 120 L0 144" stroke="#CC9900" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M28 92 L38 114 L44 138" stroke="#FEF104" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <rect x="-8" y="138" width="20" height="8" rx="4" fill="#1A1A1A" stroke="#FEF104" stroke-width="1.5"/>
+      <rect x="36" y="132" width="20" height="8" rx="4" fill="#1A1A1A" stroke="#FEF104" stroke-width="1.5"/>
+      <path d="M10 54 L34 54 L30 92 L14 92 Z" fill="#FEF104"/>
+      <path d="M12 60 L-6 82" stroke="#FEF104" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <path d="M32 60 L52 44" stroke="#FEF104" stroke-width="9" stroke-linecap="round" fill="none"/>
+      <rect x="18" y="44" width="8" height="12" rx="2" fill="#CC9900"/>
+      <rect x="6" y="14" width="36" height="34" rx="17" fill="#FEF104"/>
+      <rect x="2" y="24" width="44" height="8" rx="4" fill="#CC9900"/>
+      <rect x="10" y="18" width="10" height="7" rx="3.5" fill="#1A1A1A"/>
+      <rect x="24" y="18" width="10" height="7" rx="3.5" fill="#1A1A1A"/>
+      <path d="M12 32 Q22 38 32 32" stroke="#1A1A1A" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <text x="22" y="77" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="9" font-weight="900" fill="#1A1A1A">NID</text>
+    </g>
+    <g transform="translate(618,20)">
+      <rect x="0" y="0" width="3" height="148" rx="1.5" fill="#FEF104"/>
+      <rect x="3" y="0" width="44" height="28" fill="#fff"/>
+      <rect x="3" y="0" width="11" height="14" fill="#1A1A1A"/>
+      <rect x="25" y="0" width="11" height="14" fill="#1A1A1A"/>
+      <rect x="14" y="14" width="11" height="14" fill="#1A1A1A"/>
+      <rect x="36" y="14" width="11" height="14" fill="#1A1A1A"/>
+      <text x="25" y="42" text-anchor="middle" font-family="Arial Black,sans-serif" font-size="9" font-weight="900" fill="#FEF104" letter-spacing="1">FINISH</text>
+    </g>
+  </svg>
+
+  <div class="hero-title">班級<span><br>接力賽</span></div>
+  <p class="hero-sub">7 個班級，7 支隊伍<br>趣味任務 × 接力跑步 × 淘汰賽制</p>
+  <div class="hero-pills">
+    <div class="hpill"><b>日期</b> 7月12日（日）</div>
+    <div class="hpill"><b>集合</b> 16:30</div>
+    <div class="hpill"><b>地點</b> 待公告</div>
+    <div class="hpill"><b>資格</b> NID 學員免費</div>
+  </div>
+</div>
+
+<div class="mascot-strip">
+  <div class="ticker">
+    <span>NID RUN CLUB</span><span>·</span><span>班級接力賽</span><span>·</span><span>FAMILY DAY 2026</span><span>·</span><span>7月12日</span><span>·</span><span>NID RUN CLUB</span><span>·</span><span>班級接力賽</span><span>·</span><span>FAMILY DAY 2026</span><span>·</span><span>7月12日</span><span>·</span>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-head"><div class="sec-num">01</div><div class="sec-label">怎麼玩</div></div>
+  <div class="card">
+    <div class="step-r"><div class="snm">1</div><div class="sbody"><b>完成體能任務</b> — 每棒出發前先完成指定任務才能跑，深蹲、高抬腿、棒式，每棒都不一樣</div></div>
+    <div class="step-r"><div class="snm">2</div><div class="sbody"><b>拍手交棒出發</b> — 任務完成後拍隊友的手，下一棒衝出去，全班輪流跑，跑完繼續排隊</div></div>
+    <div class="step-r"><div class="snm">3</div><div class="sbody"><b>累計時間最短晉級</b> — 所有棒次跑完，時間最短的隊伍勝出，一路淘汰決出最強班級</div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="sec">
+  <div class="sec-head"><div class="sec-num">02</div><div class="sec-label">趣味任務</div></div>
+  <div class="tasks">
+    <div class="task"><svg width="44" height="44" viewBox="0 0 44 44" role="img"><title>深蹲</title><circle cx="22" cy="7" r="6" fill="#FEF104" stroke="#1A1A1A" stroke-width="1.5"/><path d="M22 13 L16 28 L10 38M22 13 L28 28 L34 38" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M16 22 L8 18M28 22 L36 18" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/><rect x="6" y="36" width="8" height="4" rx="2" fill="#1A1A1A"/><rect x="30" y="36" width="8" height="4" rx="2" fill="#1A1A1A"/></svg><div class="task-n">深蹲 10 下</div></div>
+    <div class="task"><svg width="44" height="44" viewBox="0 0 44 44" role="img"><title>高抬腿</title><circle cx="22" cy="7" r="6" fill="#FEF104" stroke="#1A1A1A" stroke-width="1.5"/><path d="M22 13 L20 30" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/><path d="M20 30 L10 40" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/><path d="M20 30 L32 22 L36 28" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M18 20 L8 16M24 20 L34 14" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/><rect x="6" y="38" width="8" height="4" rx="2" fill="#1A1A1A"/></svg><div class="task-n">高抬腿 20 下</div></div>
+    <div class="task"><svg width="44" height="44" viewBox="0 0 44 44" role="img"><title>側跨步</title><circle cx="22" cy="7" r="6" fill="#1A1A1A"/><path d="M22 13 L22 28" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/><path d="M22 28 L10 40M22 28 L34 40" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round"/><path d="M18 20 L6 24M26 20 L38 24" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/><rect x="6" y="38" width="8" height="4" rx="2" fill="#FEF104" stroke="#1A1A1A" stroke-width="1"/><rect x="30" y="38" width="8" height="4" rx="2" fill="#FEF104" stroke="#1A1A1A" stroke-width="1"/></svg><div class="task-n">側跨步 10 下</div></div>
+    <div class="task"><svg width="44" height="44" viewBox="0 0 44 44" role="img"><title>棒式</title><circle cx="8" cy="10" r="6" fill="#FEF104" stroke="#1A1A1A" stroke-width="1.5"/><path d="M8 16 L10 28 L34 28" stroke="#1A1A1A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M10 28 L8 38M34 28 L36 38" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/><rect x="4" y="36" width="8" height="4" rx="2" fill="#1A1A1A"/><rect x="32" y="36" width="8" height="4" rx="2" fill="#1A1A1A"/></svg><div class="task-n">棒式 10 秒</div></div>
+    <div class="task"><svg width="44" height="44" viewBox="0 0 44 44" role="img"><title>跳轉360</title><circle cx="22" cy="22" r="16" stroke="#1A1A1A" stroke-width="1.5" fill="none" stroke-dasharray="5 3"/><circle cx="22" cy="8" r="5" fill="#FEF104" stroke="#1A1A1A" stroke-width="1.5"/><path d="M22 13 L22 19" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round"/><path d="M26 7 Q34 4 36 12" stroke="#1A1A1A" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M34 10 L36 12 L32 13" stroke="#1A1A1A" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="task-n">跳轉 360°</div></div>
+    <div class="task"><svg width="44" height="44" viewBox="0 0 44 44" role="img"><title>擊掌</title><path d="M14 22 L14 12 Q14 9 17 9 Q20 9 20 12 L20 20 Q20 17 23 17 Q26 17 26 20 L26 22 Q26 19 29 19 Q32 19 32 22 L32 30 Q32 38 22 38 L14 38 Q8 36 8 28 L8 22 Q8 19 11 19 Q14 19 14 22Z" fill="#FEF104" stroke="#1A1A1A" stroke-width="1.5" stroke-linejoin="round"/><path d="M32 24 L38 24 Q40 24 40 28 L40 34 L32 34" stroke="#1A1A1A" stroke-width="1.5" fill="none" stroke-linejoin="round"/><line x1="20" y1="20" x2="20" y2="38" stroke="#1A1A1A" stroke-width="0.75" opacity="0.4"/><line x1="26" y1="22" x2="26" y2="38" stroke="#1A1A1A" stroke-width="0.75" opacity="0.4"/></svg><div class="task-n">與教練擊掌</div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="sec">
+  <div class="sec-head"><div class="sec-num">03</div><div class="sec-label">賽制</div></div>
+  <div class="card bracket">
+    <div class="rnd"><div class="rbdg" style="background:#F5F0E8;color:#1A1A1A;border:1.5px solid #1A1A1A;">第一輪</div><div class="rdsc">7 隊分 A 組（3隊）與 B 組（4隊），各取前 2 名晉級，共 4 隊進準決賽</div></div>
+    <div class="rnd"><div class="rbdg" style="background:#F5F0E8;color:#1A1A1A;border:1.5px solid #1A1A1A;">準決賽</div><div class="rdsc">4 隊分 2 對，各取第 1 名進決賽</div></div>
+    <div class="rnd"><div class="rbdg" style="background:#FEF104;color:#1A1A1A;border:1.5px solid #1A1A1A;">決賽</div><div class="rdsc" style="font-weight:700;color:#1A1A1A;">2 隊大對決，最強班級誕生</div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="sec">
+  <div class="sec-head"><div class="sec-num">04</div><div class="sec-label">獎項</div></div>
+  <div class="awards">
+    <div class="aw"><svg width="52" height="52" viewBox="0 0 52 52" role="img" style="display:block;margin:0 auto;"><title>冠軍獎盃</title><rect x="18" y="42" width="16" height="4" fill="#1A1A1A"/><rect x="14" y="46" width="24" height="4" fill="#1A1A1A"/><path d="M14 10 L14 32 Q14 38 26 38 Q38 38 38 32 L38 10 Z" fill="#FEF104" stroke="#1A1A1A" stroke-width="2"/><path d="M14 16 L7 16 Q4 16 4 21 Q4 28 14 28" stroke="#1A1A1A" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M38 16 L45 16 Q48 16 48 21 Q48 28 38 28" stroke="#1A1A1A" stroke-width="2" fill="none" stroke-linecap="round"/><text x="26" y="28" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="700" fill="#1A1A1A">1ST</text></svg><div class="aw-t">冠軍班級</div><div class="aw-s">獎狀 + 獎品</div></div>
+    <div class="aw"><svg width="52" height="52" viewBox="0 0 52 52" role="img" style="display:block;margin:0 auto;"><title>參與獎</title><circle cx="26" cy="24" r="16" fill="#1A1A1A"/><circle cx="26" cy="24" r="12" fill="none" stroke="#FEF104" stroke-width="1.5"/><text x="26" y="29" text-anchor="middle" font-family="Space Grotesk,sans-serif" font-size="10" font-weight="700" fill="#FEF104">ALL</text><path d="M20 40 L26 48 L32 40" stroke="#1A1A1A" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="aw-t">所有參賽者</div><div class="aw-s">參與獎</div></div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="sec" style="padding-bottom:1.5rem;">
+  <div class="sec-head"><div class="sec-num">05</div><div class="sec-label">什麼是 Family Day</div></div>
+  <div class="fam-box"><p>Family Day 是 NID 每個月舉辦的活動，所有班級學員 <strong>免費參加</strong>。每次都會用不一樣的方式來玩跑步。這次是班級接力賽，讓大家跨班競技、認識新跑友，非常歡迎帶朋友一起來體驗。</p></div>
+</div>
+
+<div class="form-area">
+  <div class="form-title">立即報名</div>
+  <div class="form-sub">填寫完成後我們會以 Email 通知活動詳情</div>
+  <div class="form-group"><label class="form-label">姓名 *</label><input class="form-input" type="text" id="f-name" placeholder="請填寫本名"></div>
+  <div class="form-group"><label class="form-label">Email *</label><input class="form-input" type="email" id="f-email" placeholder="your@email.com"></div>
+  <div class="form-group"><label class="form-label">手機號碼 *</label><input class="form-input" type="tel" id="f-phone" placeholder="09xx-xxx-xxx"></div>
+  <div class="form-group"><label class="form-label">就讀班級 *</label>
+    <select class="form-input" id="f-class">
+      <option value="" disabled selected>請選擇班級</option>
+      <option>週二｜苓雅 初階跑步班／明儒教練</option>
+      <option>週二｜高大 初階跑步班／傑化教練</option>
+      <option>週三｜鳳山 跑步班／明儒教練</option>
+      <option>週三｜高大 跑步班／傑化教練</option>
+      <option>週四｜苓雅 跑步班／宸瑨教練</option>
+      <option>週四｜高大 初階跑步班／阿哲教練</option>
+      <option>週六｜苓雅 早跑班／宸瑨教練</option>
+    </select>
+  </div>
+  <div class="form-group"><label class="form-label">是否帶朋友參加？</label>
+    <select class="form-input" id="f-friend">
+      <option value="no">不帶，只有我自己</option>
+      <option value="yes">有，帶朋友一起來</option>
+    </select>
+  </div>
+  <div class="form-group"><label class="form-label">你最期待什麼？（選填）</label><input class="form-input" type="text" id="f-expect" placeholder="隨便說說..."></div>
+  <div class="form-group">
+    <label class="form-label">活動注意事項 *（請展開閱讀後再勾選）</label>
+    <button class="terms-toggle" id="terms-toggle" onclick="toggleTerms()">
+      <span>點此展開閱讀注意事項</span><span id="toggle-arrow">▼</span>
+    </button>
+    <div class="terms-body" id="terms-body" onscroll="checkScroll()">
+      <p><strong>1.</strong> 本人出於自由意志同意參與恩艾迪有限公司主辦的活動。本人已詳細閱覽本活動相關說明及規定，知悉本活動具有一定的風險，本人同意承擔本活動可能發生之所有風險。</p>
+      <p><strong>2.</strong> 為將本活動可能產生之風險降至最低，本人遵守本活動相關規定及配合工作人員的指示，做好自我管理，避免造成自己或他人人身上傷害或財產上損失，並承諾在本活動期間不會從事不正當行為。</p>
+      <p><strong>3.</strong> 本人知悉本活動不包含保險，如須個人保險，請自行加保。</p>
+      <p><strong>4.</strong> 本人同意並授權恩艾迪有限公司拍攝、使用、公開展示本人之肖像、名字、聲音等，於本活動中所拍攝之作品。（若不希望工作室使用，請提前告知）</p>
+      <p><strong>5.</strong> 本人聲明並保證健康狀況良好，無心臟病、高血壓、糖尿病、氣喘及其他重大疾病；健康狀況適合參加本活動。若活動中發生任何意外事件，願自行負責。</p>
+      <p><strong>6.</strong> 主辦單位保有修改、變更或暫停本活動之權利，參加者一旦參加本活動，則表示同意接受本辦法之規範。</p>
+      <p><strong>7.</strong> 除高雄市政府發布停班停課外，若天氣預報活動當日為「雨天」，將提前通知取消並以社群及 Email 公告。此活動不提供寄物服務，請盡量避免攜帶貴重物品。</p>
+      <p><strong>8.</strong> 本活動不得將名額轉讓他人，若經查證屬實，將取消報名資格。</p>
+      <p><strong>9.</strong> 完成報名之參加者，視為同意以上聲明。</p>
+      <p><strong>10.</strong> 以上活動事項如有未盡事宜，得隨時修訂之，本活動單位保有更動修改之權利。</p>
+      <p style="color:#FEF104;font-size:10px;margin-top:0.5rem;">安全提醒：注意自行車與行人安全 · 量力而為，不適請告知教練 · 請勿空腹參加 · 天氣炎熱建議擦防曬 · 需自備水壺</p>
+    </div>
+    <div class="terms-scroll-note" id="scroll-note" style="color:#888;">請滾動至底部閱讀完畢再勾選</div>
+    <div class="form-check">
+      <input type="checkbox" id="f-agree" disabled>
+      <label for="f-agree" id="agree-label" style="color:#666;">請先展開並閱讀完注意事項</label>
+    </div>
+  </div>
+  <button class="submit-btn" onclick="handleSubmit()">確認報名 →</button>
+  <div class="success-box" id="success-box">
+    <div class="s-title">恭喜您報名完成！</div>
+    <div class="s-sub">我們會盡快以 Email 通知活動詳情<br>7月12日見！<br><br>若突然有事無法參加<br>請提前私訊 NID 官方 LINE</div>
+  </div>
+  <div class="form-note">若遇雨天，前一天晚上 23:00 前 Email 及社群公告是否取消</div>
+</div>
+
+<div class="notes-sec">
+  <div class="note"><span class="ndot">—</span>場地確認後另行公告，請密切關注 NID 社群</div>
+  <div class="note"><span class="ndot">—</span>建議穿著跑步鞋，攜帶個人水壺</div>
+  <div class="note"><span class="ndot">—</span>每隊由班級所有人參加，人越多越有優勢</div>
+  <div class="note"><span class="ndot">—</span>NID 當期學員免費，帶朋友一起來</div>
+</div>
+</div>
+
+<script>
+var termsOpen=false,scrolledToBottom=false;
+function toggleTerms(){
+  termsOpen=!termsOpen;
+  var b=document.getElementById('terms-body');
+  b.classList.toggle('open',termsOpen);
+  document.getElementById('toggle-arrow').textContent=termsOpen?'▲':'▼';
+  document.getElementById('terms-toggle').querySelector('span').textContent=termsOpen?'點此收起注意事項':'點此展開閱讀注意事項';
+  if(termsOpen)checkScroll();
+}
+function checkScroll(){
+  var b=document.getElementById('terms-body');
+  if((b.scrollHeight-b.scrollTop-b.clientHeight)<20&&!scrolledToBottom){
+    scrolledToBottom=true;
+    document.getElementById('f-agree').disabled=false;
+    document.getElementById('agree-label').textContent='我已閱讀並同意以上活動注意事項與聲明';
+    document.getElementById('agree-label').style.color='#ccc';
+    document.getElementById('scroll-note').textContent='已閱讀完畢，請勾選確認';
+    document.getElementById('scroll-note').style.color='#FEF104';
+  }
+}
+function handleSubmit(){
+  var name=document.getElementById('f-name').value.trim();
+  var email=document.getElementById('f-email').value.trim();
+  var cls=document.getElementById('f-class').value;
+  var agree=document.getElementById('f-agree').checked;
+  if(!name){alert('請填寫姓名');return;}
+  if(!email||!email.includes('@')){alert('請填寫正確的 Email');return;}
+  if(!cls){alert('請選擇班級');return;}
+  if(!agree){alert('請閱讀完注意事項並勾選同意');return;}
+  document.getElementById('success-box').style.display='block';
+  document.querySelector('.submit-btn').style.display='none';
+}
+</script>
