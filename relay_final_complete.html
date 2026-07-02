@@ -260,7 +260,7 @@ body{font-family:'Space Grotesk',Arial,sans-serif;background:var(--bg);color:var
 
 <div class="mascot-strip">
   <div class="ticker">
-    <span>NID RUN CLUB</span><span>·</span><span>螢光夜跑接力賽</span><span>·</span><span>GLOW NIGHT RUN</span><span>·</span><span>7月12日 19:30</span><span>·</span><span>NID RUN CLUB</span><span>·</span><span>螢光夜跑接力賽</span><span>·</span><span>GLOW NIGHT RUN</span><span>·</span><span>7月12日 19:30</span><span>·</span>
+    <span>NID RUN CLUB</span><span>·</span><span>螢光夜跑接力賽</span><span>·</span><span>GLOW NIGHT RUN</span><span>·</span><span>7月19日 19:30</span><span>·</span><span>NID RUN CLUB</span><span>·</span><span>螢光夜跑接力賽</span><span>·</span><span>GLOW NIGHT RUN</span><span>·</span><span>7月19日 19:30</span><span>·</span>
   </div>
 </div>
 
@@ -359,11 +359,10 @@ body{font-family:'Space Grotesk',Arial,sans-serif;background:var(--bg);color:var
       <option>週六｜苓雅 早跑班／宸瑨教練</option>
     </select>
   </div>
-  <div class="form-group"><label class="form-label">是否帶朋友參加？</label>
-    <select class="form-input" id="f-friend">
-      <option value="no">不帶，只有我自己</option>
-      <option value="yes">有，帶朋友一起來</option>
-    </select>
+  <div class="form-group">
+    <label class="form-label">隊名（選填）</label>
+    <input class="form-input" type="text" id="f-team" placeholder="先跟隊友討論好再填，沒填我們會幫你分組">
+    <div style="font-size:11px;color:#8AABBB;margin-top:5px;">沒有隊名沒關係，我們會自動幫忙分組！</div>
   </div>
   <div class="form-group"><label class="form-label">你最期待什麼？（選填）</label><input class="form-input" type="text" id="f-expect" placeholder="隨便說說..."></div>
   <div class="form-group">
@@ -393,7 +392,7 @@ body{font-family:'Space Grotesk',Arial,sans-serif;background:var(--bg);color:var
   <button class="submit-btn" id="submit-btn" onclick="handleSubmit()">確認報名 →</button>
   <div class="success-box" id="success-box">
     <div class="s-title">恭喜您報名完成！</div>
-    <div class="s-sub">我們在活動前幾天會以 Email 通知活動詳情<br>7月19日見！<br><br>若突然有事無法參加<br>請提前私訊 NID 官方 LINE</div>
+    <div class="s-sub">我們會在活動前幾天以 Email 通知活動詳情<br>7月19日見！<br><br>若突然有事無法參加<br>請提前私訊 NID 官方 LINE</div>
   </div>
   <div class="form-note">若遇雨天，前一天晚上 23:00 前 Email 及社群公告是否取消</div>
 </div>
@@ -479,6 +478,7 @@ function handleSubmit() {
     email: email,
     phone: document.getElementById('f-phone').value.trim(),
     className: cls,
+    team: document.getElementById('f-team').value.trim(),
     friend: document.getElementById('f-friend').value,
     expect: document.getElementById('f-expect').value.trim()
   };
