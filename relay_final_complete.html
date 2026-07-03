@@ -289,7 +289,7 @@ body{font-family:'Space Grotesk',Arial,sans-serif;background:var(--bg);color:var
     </div>
     <div class="task">
       <svg width="44" height="44" viewBox="0 0 44 44" role="img"><title>自拍</title><circle cx="22" cy="22" r="16" stroke="#1A1A1A" stroke-width="1.5" fill="none" stroke-dasharray="5 3"/><circle cx="22" cy="8" r="5" fill="#FFE500" stroke="#050A0E" stroke-width="1.5"/><path d="M22 13 L22 19" stroke="#D0E8F0" stroke-width="2" stroke-linecap="round"/><path d="M26 7 Q34 4 36 12" stroke="#1A1A1A" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M34 10 L36 12 L32 13" stroke="#1A1A1A" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <div class="task-n">全員自拍（比 D 手勢）</div>
+      <div class="task-n">全員自拍比 D 手勢</div>
     </div>
     <div class="task">
       <svg width="44" height="44" viewBox="0 0 44 44" role="img"><title>口號</title><path d="M8 14 L8 30 L16 30 L22 36 L22 30 L36 30 L36 14 Z" fill="#39FF14" stroke="#050A0E" stroke-width="1.5" stroke-linejoin="round"/><circle cx="16" cy="22" r="2" fill="#050A0E"/><circle cx="22" cy="22" r="2" fill="#050A0E"/><circle cx="28" cy="22" r="2" fill="#050A0E"/></svg>
@@ -364,6 +364,7 @@ body{font-family:'Space Grotesk',Arial,sans-serif;background:var(--bg);color:var
     <input class="form-input" type="text" id="f-team" placeholder="先跟隊友討論好再填，沒填我們會幫你分組">
     <div style="font-size:11px;color:#8AABBB;margin-top:5px;">沒有隊名沒關係，我們會自動幫忙分組！</div>
   </div>
+
   <div class="form-group"><label class="form-label">你最期待什麼？（選填）</label><input class="form-input" type="text" id="f-expect" placeholder="隨便說說..."></div>
   <div class="form-group">
     <label class="form-label">活動注意事項 *（請展開閱讀後再勾選）</label>
@@ -479,7 +480,6 @@ function handleSubmit() {
     phone: document.getElementById('f-phone').value.trim(),
     className: cls,
     team: document.getElementById('f-team').value.trim(),
-    friend: document.getElementById('f-friend').value,
     expect: document.getElementById('f-expect').value.trim()
   };
 
